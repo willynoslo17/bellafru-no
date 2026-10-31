@@ -715,7 +715,7 @@ export async function onRequestGet(context: any) {
   const sector = STORE.sector;
   const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
   if (!context.env.GELATO_API_KEY) {
-    return Response.json({ error: "Gelato is not configured", products: [], supplier: "Gelato", sector, source: "gelato-unconfigured" }, { status: 503, headers: headersOut });
+    return Response.json({ error: "Gelato is not configured", products: [], supplier: "Gelato", sector, source: "gelato-unconfigured" }, { status: 200, headers: headersOut });
   }
   const origin = new URL(context.request.url).origin;
   const key = `${origin}/__cache/gelato-products/v3?sector=${encodeURIComponent(sector)}`;
@@ -759,7 +759,7 @@ export async function onRequestGet(context: any) {
       diagnostics: diag,
       markets: ["NO", "EU", "PE"],
       compliance: "EU/Nordic POD merch",
-    }, { status: priced.length ? 200 : 503, headers: { ...headersOut, "x-catalog-cache": state } });
+    }, { status: 200, headers: { ...headersOut, "x-catalog-cache": state } });
   } catch (error) {
     return Response.json({
       error: error instanceof Error ? error.message : "Gelato request failed",

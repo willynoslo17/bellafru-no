@@ -195,6 +195,7 @@
     if (form.dataset.enhanced) return;
     form.dataset.enhanced = "true";
     const button = form.querySelector('[type="submit"]');
+    if (!button) return;
     button.textContent = "BETAL SIKKERT MED STRIPE";
     const summary = '<div class="full notice nordic-precontract">Du sendes til Stripe Checkout for sikker betaling. Selger: '+BRAND+' (Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA). Totalpris inkl. 25 % MVA og frakt (79 kr i Norge) vises før du betaler. Estimert levering 5–20 virkedager. 14 dagers angrerett – du betaler selv returfrakten.<br><span lang="es">Serás redirigido a Stripe Checkout para pagar de forma segura. Vendedor: '+BRAND+' (Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA). El precio total con 25 % de IVA y envío (79 kr en Noruega) se muestra antes de pagar. Entrega estimada: 5–20 días hábiles. Derecho de desistimiento de 14 días; los gastos de devolución corren por tu cuenta.</span></div>';
     const oldNotice = form.querySelector(".notice");
