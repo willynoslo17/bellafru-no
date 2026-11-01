@@ -264,7 +264,7 @@
   /* Storefront rule (owner, 2026-10-02): every product that has an image is shown. */
   /* 2026-10-31 (sincert): only products with a confirmed certificate are shown. Restore with restaurar_por_sku.py. */
   const NORDIC_CERT_ONLY = true;
-  const NORDIC_CERTIFIED = new Set(["2090313654360891394", "CJLX307718901AZ"]);
+  const NORDIC_CERTIFIED = new Set(["2090313654360891394", "CJLX307718901AZ", "10217832645250252489", "10945739826855285353", "15394044987256052787", "17274682487010894065", "20576335176849192516", "20817930408143847947", "23068456773577440948", "24630394414419539011", "25639924601141209537", "26439526089443980006", "29592648781520973018", "30732204809320370955", "31054612291141160666", "33296314210921499550", "49887184211770802001", "77509838651785518861", "96541015195025441594", "pfy-beauty-crew-pink-l", "pfy-beauty-crew-pink-m", "pfy-beauty-crew-pink-s", "pfy-beauty-crew-pink-xl", "pfy-beauty-hoodie-pink-l", "pfy-beauty-hoodie-pink-m", "pfy-beauty-hoodie-pink-s", "pfy-beauty-hoodie-pink-xl", "pfy-beauty-journal", "pfy-beauty-poster-art", "pfy-beauty-poster-type", "pfy-beauty-sticker", "pfy-beauty-tee-white-l", "pfy-beauty-tee-white-m", "pfy-beauty-tee-white-s", "pfy-beauty-tee-white-xl", "pfy-beauty-tote"]);
   function certified(item) { return !NORDIC_CERT_ONLY || [item.externalId, item.cjPid, item.id, item.sku].some(v => v != null && NORDIC_CERTIFIED.has(String(v))); }
   function storefrontItem() {
     return item => Boolean(item && item.image && certified(item));
