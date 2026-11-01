@@ -1,7 +1,7 @@
 /** Norway market price matching (2026-10-30). Keys are CJ product ids (pid).
  * PRICE_OVERRIDE: regular NOK price aligned to the Norwegian market, never below the profit floor.
  * HIDDEN: profit floor is above the Norwegian market price -> product is hidden (not deleted). */
-export const PRICE_OVERRIDE: Record<string, number> = {"2090313654360891394": 205};
+export const PRICE_OVERRIDE: Record<string, number> = {"2090313654360891394": 219};
 /* 2026-10-30: products without required certification removed from store (owner order). */
 /* 2026-10-31: second certification review (owner order) - more items hidden. */
 /* 2026-10-31 (sincert): owner order - only products with a confirmed certificate may be shown. */
@@ -12,5 +12,8 @@ export const HIDDEN = new Set<string>(["F25DF9B2-5E6B-42C9-85FD-B34D55E39822", "
 export const CERT_ONLY = true;
 export const CERTIFIED = new Set<string>(["2090313654360891394", "pfy-beauty-tote", "pfy-beauty-poster-art", "pfy-beauty-poster-type", "pfy-beauty-journal", "pfy-beauty-sticker", "pfy-beauty-tee-white-s", "pfy-beauty-tee-white-m", "pfy-beauty-tee-white-l", "pfy-beauty-tee-white-xl", "pfy-beauty-crew-pink-s", "pfy-beauty-crew-pink-m", "pfy-beauty-crew-pink-l", "pfy-beauty-crew-pink-xl", "pfy-beauty-hoodie-pink-s", "pfy-beauty-hoodie-pink-m", "pfy-beauty-hoodie-pink-l", "pfy-beauty-hoodie-pink-xl"]);
 
-/* 2026-11-01 owner rule: price ~15 kr under the most comparable Norwegian product (total incl. shipping). Per CJ variant (vid). */
-export const VARIANT_PRICE: Record<string, number> = {"2090313654620938242": 205};
+/* 2026-11-01 16:13 owner rule (replaces ~15 kr under): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
+export const VARIANT_PRICE: Record<string, number> = {"2090313654620938242": 219};
+
+/* Printify (01.11): fast pris = vanlig norsk markedspris for tilsvarende POD-vare; hver pris gir fortjeneste også ved fri frakt (pris*0.77 > (kost+frakt)*10.8). */
+export const PRINTIFY_PRICE: Record<string, number> = {"pfy-beauty-tote": 299, "pfy-beauty-poster-art": 229, "pfy-beauty-poster-type": 229, "pfy-beauty-journal": 259, "pfy-beauty-sticker": 149, "pfy-beauty-tee-white-s": 299, "pfy-beauty-tee-white-m": 299, "pfy-beauty-tee-white-l": 299, "pfy-beauty-tee-white-xl": 299, "pfy-beauty-crew-pink-s": 549, "pfy-beauty-crew-pink-m": 549, "pfy-beauty-crew-pink-l": 549, "pfy-beauty-crew-pink-xl": 549, "pfy-beauty-hoodie-pink-s": 649, "pfy-beauty-hoodie-pink-m": 649, "pfy-beauty-hoodie-pink-l": 649, "pfy-beauty-hoodie-pink-xl": 649};
