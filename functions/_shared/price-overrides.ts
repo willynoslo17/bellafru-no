@@ -1,7 +1,7 @@
 /** Norway market price matching (2026-10-30). Keys are CJ product ids (pid).
  * PRICE_OVERRIDE: regular NOK price aligned to the Norwegian market, never below the profit floor.
  * HIDDEN: profit floor is above the Norwegian market price -> product is hidden (not deleted). */
-export const PRICE_OVERRIDE: Record<string, number> = {};
+export const PRICE_OVERRIDE: Record<string, number> = {"2090313654360891394": 205};
 /* 2026-10-30: products without required certification removed from store (owner order). */
 /* 2026-10-31: second certification review (owner order) - more items hidden. */
 /* 2026-10-31 (sincert): owner order - only products with a confirmed certificate may be shown. */
@@ -11,3 +11,6 @@ export const HIDDEN = new Set<string>(["F25DF9B2-5E6B-42C9-85FD-B34D55E39822", "
  * Restore per SKU with /workspace/negocios/restaurar_por_sku.py (adds the id here and removes it from HIDDEN). */
 export const CERT_ONLY = true;
 export const CERTIFIED = new Set<string>(["2090313654360891394"]);
+
+/* 2026-11-01 owner rule: price ~15 kr under the most comparable Norwegian product (total incl. shipping). Per CJ variant (vid). */
+export const VARIANT_PRICE: Record<string, number> = {"2090313654620938242": 205};
