@@ -34,6 +34,7 @@
     "manicure set"
   ],
   "pids": [
+    "2090313654360891394",
     "25DEF815-38DA-483E-934A-68D3A7CC6B30",
     "F25DF9B2-5E6B-42C9-85FD-B34D55E39822",
     "1567808255651491840",
@@ -632,6 +633,18 @@
       "image": "https://cf.cjdropshipping.com/1620904236884.jpg",
       "supplierPriceMaxUsd": 5.8889,
       "keyword": "detangling brush"
+    },
+    {
+      "id": "2090313654360891394",
+      "sku": "CJLX307718901AZ",
+      "name": "Smykkesett med firkløver – åpen armring og ring i gullfarget rustfritt stål",
+      "nameEn": "2Pcs Women Hollow Four Leaf Clover Jewelry Set",
+      "category": "Skjønnhet",
+      "image": "https://cf.cjdropshipping.com/216271ed-af3b-47c8-bd47-89d550a9a738.jpg",
+      "supplierPriceMaxUsd": 1.5,
+      "keyword": "",
+      "description": "Sett med åpen armring og ring med hul firkløver i gullfarget rustfritt stål. Testet for nikkelavgivelse etter EN 1811:2023 (godkjent, REACH vedlegg XVII).",
+      "certified": "2026-11-01"
     }
   ]
 }
