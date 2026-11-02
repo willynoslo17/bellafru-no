@@ -9,8 +9,9 @@ export const HIDDEN = new Set<string>(["F25DF9B2-5E6B-42C9-85FD-B34D55E39822", "
 
 /* 2026-10-31 (sincert): CERT_ONLY = true -> ONLY ids listed in CERTIFIED are shown/sellable (all providers: CJ, Printify, Printful, Gelato).
  * Restore per SKU with /workspace/negocios/restaurar_por_sku.py (adds the id here and removes it from HIDDEN). */
+/* 2026-11-02: Printify-krus og barne-t-skjorter skjult igjen: ingen dokumentasjon (EU 1935/2004/LFGB for krus; EN 14682/REACH for barneklær). */
 export const CERT_ONLY = true;
-export const CERTIFIED = new Set<string>(["2090313654360891394", "pfy-beauty-tote", "pfy-beauty-poster-art", "pfy-beauty-poster-type", "pfy-beauty-journal", "pfy-beauty-sticker", "pfy-beauty-tee-white-s", "pfy-beauty-tee-white-m", "pfy-beauty-tee-white-l", "pfy-beauty-tee-white-xl", "pfy-beauty-crew-pink-s", "pfy-beauty-crew-pink-m", "pfy-beauty-crew-pink-l", "pfy-beauty-crew-pink-xl", "pfy-beauty-hoodie-pink-s", "pfy-beauty-hoodie-pink-m", "pfy-beauty-hoodie-pink-l", "pfy-beauty-hoodie-pink-xl", "pfy-beauty-mug-std", "pfy-beauty-mug-two-pink"]);
+export const CERTIFIED = new Set<string>(["2090313654360891394", "pfy-beauty-tote", "pfy-beauty-poster-art", "pfy-beauty-poster-type", "pfy-beauty-journal", "pfy-beauty-sticker", "pfy-beauty-tee-white-s", "pfy-beauty-tee-white-m", "pfy-beauty-tee-white-l", "pfy-beauty-tee-white-xl", "pfy-beauty-crew-pink-s", "pfy-beauty-crew-pink-m", "pfy-beauty-crew-pink-l", "pfy-beauty-crew-pink-xl", "pfy-beauty-hoodie-pink-s", "pfy-beauty-hoodie-pink-m", "pfy-beauty-hoodie-pink-l", "pfy-beauty-hoodie-pink-xl"]);
 
 /* 2026-11-01 16:13 owner rule (replaces ~15 kr under): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
 export const VARIANT_PRICE: Record<string, number> = {"2090313654620938242": 219};
